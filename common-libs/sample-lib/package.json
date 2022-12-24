@@ -1,0 +1,31 @@
+{
+  "name": "@sivi/sample-lib",
+  "version": "0.1.0",
+  "main": "./dist/lib.js",
+  "peerDependencies": {
+    "chroma-js": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/chroma-js": "^2.1.4",
+    "@types/node": "^18.11.17",
+    "chroma-js": "^2.4.2",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.3",
+    "vite-tsconfig-paths": "^4.0.3"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/lib.mjs",
+      "require": "./dist/lib.js"
+    }
+  },
+  "files": [
+    "dist/*",
+    "package.json"
+  ],
+  "scripts": {
+    "clean:dist": "rimraf dist/",
+    "build": "yarn clean:dist && vite build"
+  }
+}
